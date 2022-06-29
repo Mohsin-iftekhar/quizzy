@@ -37,7 +37,7 @@ function App() {
         <Header />
         <Routes>
       
-          <Route path='/quiz' element={<Quiz/>}/>
+          <Route path='quiz' element={<Quiz/>}/>
            
           
           <Route path='/' element={<Home/>}/>
