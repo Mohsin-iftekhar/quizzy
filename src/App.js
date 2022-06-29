@@ -1,23 +1,50 @@
+import React from 'react';
+import { BrowserRouter, Route,useRouteMatch,useParams,Routes,Link } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Quiz from './components/Quiz';
+import Home from './components/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  //   <div>
+  //   <BrowserRouter>
+  //   <Header/>
+  //   <Routes>
+  //   <Route path='/' element={<Front/>} />
+  //   <Route path='/Vegetable' element={<Vegetable/>} />
+  //   <Route path='/fashion' element={<Fashion/>}/>
+  //   <Route path='grocery' element={<Grocery/>}/>
+  //   <Route path='fashion/grocstore' element={
+  //     <Homefash/>
+  //     }/>
+  //     <Route path='Vegetable/grocstore' element={
+  //       <Home/>
+  //       }/>
+  //       <Route path='grocery/grocstore' element={
+  //         <Home/>
+  //         }/>
+  //         <Route path='cart' element={<Cart/>}/>
+  //   </Routes>
+  //  </BrowserRouter>
+  //   </div>
+
+<div>
+<BrowserRouter>
+      <div className='App'>
+        <Header />
+        <Routes>
+      
+          <Route path='/quiz' element={<Quiz/>}/>
+           
+          
+          <Route path='/' element={<Home/>}/>
+        
+        </Routes>
+      </div>
+      </BrowserRouter>
     </div>
   );
 }
